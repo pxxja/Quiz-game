@@ -1,0 +1,169 @@
+
+
+
+body {
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(to right, #1a1a1a, #00FFFF);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  max-width: 600px;
+  width: 100%;
+  padding: 20px;
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: white;
+  text-align: center;
+  /* box-shadow: 5px 5px 10px black; */
+  box-shadow: 0 0 15px 6px black;
+}
+
+#btn{
+  margin: 60px 0 0 0;
+  background-color: #FFBF00;
+  padding: 20px 40px;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-family: monospace;
+  /* border: 1px solid rgb(41, 41, 19); */
+  
+}
+.next-Q {
+   position: relative;
+  margin: 20px 0;
+  background-color: #FFBF00;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  bottom: 20px; 
+    
+  
+}
+
+
+#btn:hover, .next-Q:hover {
+  background-color: #FF9A00;
+}
+
+.hide {
+  display: none;
+}
+
+#question {
+  font-size: 1.5em;
+  margin: 20px 0;
+  color: black;
+}
+
+#ansContainer {
+  display: grid;
+  grid-template-rows: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 10px;
+}
+
+.ansBtn {
+  padding: 10px;
+  margin: 10px;
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 1em;
+  font-family: cursive;
+}
+
+
+/* .ansBtn:hover {
+  background-color:rgb(186, 233, 233);
+} */
+
+.correct {
+  background-color: green;
+}
+
+.wrong {
+  background-color: red;
+ 
+}
+
+.anssHeading{
+  font-size: 2em;
+  top: 70px;
+  position: absolute;
+  height: 50px;
+  max-width: 50em;
+  /* background-color: #FF9A00; */
+  margin: 10px;
+  color: black;
+}
+
+.end-message1 {
+  font-size: 3em;
+  color: black;
+  margin-bottom: 60px;
+  font-family:monospace ;
+  
+}
+
+@media (max-width:1500px) {
+  .anssHeading{
+    top: 20px;
+    font-size: 1.5em;
+    color: whitesmoke;
+  }
+}
+
+@media (max-width:480px) {
+    .anssHeading{
+      top: 10px;
+      font-size: 1em;
+      color: whitesmoke;
+    }
+    .end-message1{
+      font-size: 2em;
+    }
+}
+@media(max-width:280px){
+  .anssHeading{
+    display: none;
+    margin: 50px;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    margin: 20px;
+      padding: 10px;
+  }
+
+  #btn, .next-Q {
+      padding: 10px 20px;
+      font-size: 16px;
+  }
+
+  .ansBtn {
+      padding: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  #question {
+      font-size: 1.2em;
+  }
+
+  .ansBtn {
+      font-size: 14px;
+  }
+}
